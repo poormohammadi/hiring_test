@@ -1,41 +1,202 @@
+:root {
+  --primary-gradient-start: #6a11cb;
+  --primary-gradient-end: #2575fc;
+  --primary-hover-start: #5a0db3;
+  --primary-hover-end: #1e63d9;
+
+  --secondary-gradient-start: #007bff;
+  --secondary-gradient-end: #0056b3;
+  --secondary-hover-start: #0056b3;
+  --secondary-hover-end: #003f8a;
+
+  --neutral-gradient-start: #6c757d;
+  --neutral-gradient-end: #5a6268;
+  --neutral-hover-start: #5a6268;
+  --neutral-hover-end: #444b50;
+
+  --background-gradient-start: #ff9a9e;
+  --background-gradient-middle: #fad0c4;
+  --background-gradient-end: #fbc2eb;
+
+  --input-background-start: #e3f2fd;
+  --input-background-end: #ffffff;
+
+  --border-color: #ccc;
+  --focus-border-color: #6a11cb;
+
+  --text-color: #333;
+  --error-color: red;
+
+  --box-shadow-light: rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: rgba(0, 0, 0, 0.2);
+  --box-shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.pageContainer {
+  height: 100vh;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--background-gradient-start) 0%,
+    var(--background-gradient-middle) 50%,
+    var(--background-gradient-middle) 75%,
+    var(--background-gradient-end) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--box-shadow-light);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px var(--box-shadow-medium);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 20px;
 }
 
 .input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--input-background-start),
+    var(--input-background-end)
+  );
+  box-shadow: inset 0 2px 4px var(--box-shadow-light),
+    0 4px 8px var(--box-shadow-light);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--focus-border-color);
+  outline: none;
+  box-shadow: inset 0 2px 4px var(--box-shadow-light),
+    0 6px 12px rgba(106, 17, 203, 0.3);
+  transform: scale(1.02);
+  background: linear-gradient(
+    to right,
+    var(--input-background-start),
+    var(--input-background-end)
+  );
 }
 
 .button {
-    padding: 10px 15px;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(
+    45deg,
+    var(--primary-gradient-start),
+    var(--primary-gradient-end)
+  );
+  box-shadow: 0 4px 12px var(--box-shadow-medium);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(
+    45deg,
+    var(--primary-hover-start),
+    var(--primary-hover-end)
+  );
+  box-shadow: 0 6px 16px var(--box-shadow-dark);
 }
 
 .loginButton {
-    background-color: #007bff;
+  background: linear-gradient(
+    45deg,
+    var(--secondary-gradient-start),
+    var(--secondary-gradient-end)
+  );
+}
+
+.loginButton:hover {
+  background: linear-gradient(
+    45deg,
+    var(--secondary-hover-start),
+    var(--secondary-hover-end)
+  );
 }
 
 .registerButton {
-    background-color: #6c757d;
+  background: linear-gradient(
+    45deg,
+    var(--neutral-gradient-start),
+    var(--neutral-gradient-end)
+  );
+}
+
+.registerButton:hover {
+  background: linear-gradient(
+    45deg,
+    var(--neutral-hover-start),
+    var(--neutral-hover-end)
+  );
+}
+
+.buttonContainer {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
 }
 
 .error {
-    color: red;
-    text-align: center;
+  color: var(--error-color);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
 }
