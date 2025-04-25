@@ -1,73 +1,16 @@
+# Login and Level Selection
 
-## Card Memory Game - Simplified Skill Test
+In this repo the frontend section of this has been implemented https://github.com/labsorg525/hiring_test?tab=readme-ov-file#frontend-developer
 
-### Welcome!
-Thank you for your interest in joining! This is a simplified skill test designed to understand your approach to problem-solving and development. The tasks are categorized based on your area of expertise.
+# Changed Files
 
----
+Only Login and LevelSelectionModal folder are created in the src folder of this repo.
 
-### 🎯 **Objective:**
-Build a small part of a card memory game based on your assigned role. This is meant to be completed within **2–3 hours** to showcase your skills.
+## Login Page
 
-### 🛠️ **Tech Stack:**
-- Frontend: React, Vite
-- Backend: Node.js, Express
-- Database: MongoDB (only if applicable)
-- Web3: MetaMask integration (only if applicable)
+As requested in the task, I have changed the elements and styles of the login page to make it more appeal and responsive. I tried to apply a fantasy design for it.  As it was working with css modules, I didn't change the way it is working with styles and added the css variables in that file. **In the real world, it doesn't happen because we usually use styled components and do not define variables in a component. The theme is supposed to be defined globally** 
 
-### 🚀 **Setup Guide:**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/texaslabs/Test.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd texaslabs
-   ```
-3. Set up the backend:
-   ```bash
-   cd ./backend
-   npm install
-   npm start
-   ```
-4. Set up the frontend:
-   ```bash
-   cd ../frontend
-   npm install
-   npm start
-   ```
-5. Visit `http://localhost:5173` to see the project.
+## Modal
 
----
+For modal, I used Material UI which were added to the project. I used the Dialog component, styled components and MUI theming for stylings. 
 
-### 🧩 **Task Breakdown by Role (Ordered by Importance):**
-
-#### **Frontend Developer:**
-- Style the login page to be visually appealing and responsive.
-- Create a modal dialog for level selection (Easy, Medium, Hard).
-
-#### **Backend Developer:**
-- Implement a simple API endpoint to save game results.
-- Create a route to fetch the game result history (no need for complex authentication).
-
-#### **Full Stack Developer:**
-- Complete both the Frontend and Backend tasks.
-- Integrate the API to display the game result history on a new page.
-
-#### **Web3 Developer:**
-- Implement MetaMask wallet connection.
-- Show a message displaying the connected wallet address.
-
-#### **Designer:**
-- Create assets like a styled Play button and card designs.
-- Suggest UI/UX improvements for the main screen.
-
-#### **QA Tester:**
-- Create a comprehensive testing plan that outlines your testing strategy for the card memory game, including at least 8 test cases with detailed steps and expected outcomes.  
-- Additionally, suggest best practices for maintaining quality throughout the development lifecycle.
-
----
-
----
-
-### ⚡ **Good Luck and Have Fun!**
